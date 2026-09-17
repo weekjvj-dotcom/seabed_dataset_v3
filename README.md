@@ -44,17 +44,6 @@ v3 是一套由 Blender 原生 Cycles 生成的、可复现的合成水下数据
 
 RGB 图像由 Cycles path tracing 直接生成。项目没有使用 Python 对渲染后的 RGB 像素做雾化、颜色覆盖、指数衰减或照片后处理。
 
-### v3 与 v4 的关系
-
-本仓库采用 v3 作为算法/生成系统版本。configs/v3_500_scenes.json 是在已验证 v3 生成器上扩展规模的 additive batch 配置，不代表必须重新建设一套 v4 Blender 系统。
-
-当前版本关系如下：
-
-1. v3_first_round：早期小规模基线；
-2. v3_500_scenes：批量生成计划；
-3. v3-400-training-ready：该计划中已经完成并验收的前 400 个 scene；
-4. 如果修改水体模型、几何规则、GT 定义、资产链路或核心生成算法，应建立新的配置、签名和输出根目录。
-
 ## 当前状态与数据规模
 
 | 项目 | 当前值 |
@@ -413,28 +402,6 @@ accepted scene 进入发布清单前须通过：
 8. 当前仓库没有训练模型、checkpoint、PSNR/SSIM 或下游任务结论；
 9. 400 个合成 scene 不保证训练收益、真实域泛化或增强效果；
 10. 改变几何、资产、相机、光照定义、水体定义或 GT 规则时，必须重新生成受影响的 GT 和 provenance。
-
-## 故障排查
-
-### 没有 bpy
-
-tools/run_500_scenes.py 是 Blender Python 脚本，不是普通 CPython 脚本。用 Blender CLI 调用它；纯 Python 测试只能运行不依赖 bpy 的模块。
-
-### 解压后索引覆盖
-
-每个 volume 都有同名 pairs.jsonl 和 dataset_manifest.json。按卷解压到 parts/<volume-name>/，再由 loader 遍历或合并。
-
-### clone 后找不到 raw output 或 scan cache
-
-这是预期行为。大体积 outputs/ 和 reports/v3_scan_cache.blend 不进入 Git 历史。只训练时下载 Release ZIP；要重新生成必须提供完整本地工作区、资产、cache、calibration 和磁盘。
-
-### Metal/Cycles 内存压力
-
-不要并发渲染。使用 serial_blender_batch.py、保持 template-cache、缩小范围，并检查 accepted checkpoint 后继续。不要删除 accepted 数据来掩盖失败。
-
-### 训练图像翻转或颜色异常
-
-检查 16-bit 是否保留、RGB channel 顺序、是否重复上下翻转，以及 [-1, 1] 归一化/反归一化是否互为逆操作。
 
 ## 许可证与资产来源
 
