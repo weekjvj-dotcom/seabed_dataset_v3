@@ -1,0 +1,18 @@
+# Generated dataset binaries are kept outside Git history and uploaded as
+# validated GitHub Release assets after the 500-scene run is complete.
+outputs/v3_500_scenes_final/
+outputs/v3_500_scenes_retry/
+outputs/v3_500_scenes_retry24/
+outputs/v3_500_scenes/
+previews/
+
+# Local Blender/cache and transient execution files.
+reports/v3_scan_cache.blend
+reports/last_batch_error.txt
+reports/serial_blender_batch_*.jsonl
+reports/serial_blender_batch.json
+.render.lock
+.DS_Store
+.idea/
+__pycache__/
+*.pyc

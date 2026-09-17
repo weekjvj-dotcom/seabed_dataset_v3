@@ -1,0 +1,14 @@
+{
+  "dataset_id": "seabed-v3-400-training-ready",
+  "scene_count": 400,
+  "clear_reference_count": 400,
+  "degraded_sample_count": 1200,
+  "states": ["clear", "mild", "medium", "strong"],
+  "clear_reference_path_pattern": "references/scene_{number:04d}_clear",
+  "lighting_policy": "one lighting mode per scene; not a three-light same-scene control set",
+  "training_archive_volume_count": 4,
+  "training_archive_scenes_per_volume": 100,
+  "per_scene_blend_saved": false,
+  "full_validation_report": "validation.json",
+  "algorithm_version": "v3 additive batch; no new v4 algorithm"
+}

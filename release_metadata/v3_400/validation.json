@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "scenes": 400,
+  "references": 400,
+  "pairs": 1200,
+  "lighting_mode_counts": {
+    "natural": 134,
+    "artificial": 133,
+    "mixed": 133
+  },
+  "accepted_attempt_counts": {
+    "0": 299,
+    "18": 1,
+    "3": 27,
+    "1": 21,
+    "6": 15,
+    "9": 9,
+    "12": 2,
+    "15": 4,
+    "10": 2,
+    "13": 1,
+    "2": 4,
+    "7": 4,
+    "4": 8,
+    "21": 1,
+    "26": 1,
+    "5": 1
+  },
+  "shared_gt_checked": true,
+  "rgb_exr_headers_checked": true
+}

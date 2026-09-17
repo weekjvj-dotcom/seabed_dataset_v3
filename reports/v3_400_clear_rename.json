@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "expected_scenes": 400,
+  "renamed_references": 400,
+  "updated_sample_metadata_files": 1200,
+  "updated_checkpoint_files": 400,
+  "reference_path_pattern": "references/scene_{number:04d}_clear",
+  "reference_id_preserved": true
+}

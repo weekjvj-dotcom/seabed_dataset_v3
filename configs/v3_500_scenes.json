@@ -1,0 +1,131 @@
+{
+  "schema_version": 2,
+  "root_seed": 7202615,
+  "purpose": "engineering_validation",
+  "batch_dataset_id": "seabed-v3-500-scenes",
+  "scene_count": 500,
+  "output_root": "outputs/v3_500_scenes_final",
+  "layouts": [
+    {
+      "seed": 101,
+      "split": "train"
+    }
+  ],
+  "batch_layout_schedule": {
+    "scheme": "derive_seed",
+    "namespace": "scene_layout",
+    "rule": "derive_seed(root_seed, namespace, scene_number)",
+    "scene_id_format": "scene_{scene_number:04d}",
+    "unique_layout_seed_required": true,
+    "layout_family_policy": "v3 generator families are selected by layout seed; scene geometry/camera/fish streams remain deterministic"
+  },
+  "batch_split_schedule": {
+    "train": 400,
+    "validation": 50,
+    "test": 50
+  },
+  "geometry_states": 1,
+  "max_attempts": 3,
+  "batch_max_attempts": 24,
+  "lighting_modes": [
+    "natural",
+    "artificial",
+    "mixed"
+  ],
+  "single_lighting_schedule": {
+    "type": "balanced_cyclic",
+    "offset": 0,
+    "counts": {
+      "natural": 167,
+      "artificial": 167,
+      "mixed": 166
+    },
+    "rule": "lighting_mode = lighting_modes[(scene_number - 1 + offset) % len(lighting_modes)]"
+  },
+  "depths_m": [
+    5
+  ],
+  "presets": [
+    {
+      "id": "mild",
+      "absorption": [0.065, 0.022, 0.009],
+      "scatter": [0.014, 0.014, 0.014],
+      "g": 0.65,
+      "ior": 1.333
+    },
+    {
+      "id": "medium",
+      "absorption": [0.12, 0.045, 0.018],
+      "scatter": [0.032, 0.032, 0.032],
+      "g": 0.65,
+      "ior": 1.333
+    },
+    {
+      "id": "strong",
+      "absorption": [0.2, 0.08, 0.032],
+      "scatter": [0.058, 0.058, 0.058],
+      "g": 0.65,
+      "ior": 1.333
+    }
+  ],
+  "density_multiplier": [0.9, 1.1],
+  "render": {
+    "resolution": [256, 256],
+    "samples": 512,
+    "seed": 4401,
+    "max_bounces": 12,
+    "volume_bounces": 4
+  },
+  "camera_sampling": {
+    "lens_mm": 28,
+    "height_m": [1.8, 2.3],
+    "x_range": [-0.45, 0.45],
+    "y_range": [-3.8, -3.1],
+    "look_y_range": [0, 0.7],
+    "look_z_range": [-0.6, -0.3],
+    "roll_deg": [-3, 3],
+    "pitch_down_deg": [30.5, 31.5]
+  },
+  "object_sampling": {
+    "fish_scale": [0.75, 1.25],
+    "fish_pitch_deg": [-15, 15],
+    "fish_roll_deg": [-8, 8],
+    "foreground_fish": [0, 2],
+    "midground_fish": [4, 8],
+    "background_fish": [3, 6],
+    "small_scale": [0.9, 1.1],
+    "small_yaw_deg": [-20, 20]
+  },
+  "lighting_sampling": {
+    "sky_strength": [0.08, 0.35],
+    "sun_elevation_deg": [20, 75],
+    "sun_rotation_deg": [0, 360],
+    "spot_energy": [100, 600],
+    "spot_full_angle_deg": [35, 70],
+    "spot_blend": [0.3, 0.7],
+    "temperature_k": [4500, 6500]
+  },
+  "quality": {
+    "valid_fraction_min": 0.9,
+    "near_fraction_min": 0.05,
+    "middle_fraction_min": 0.15,
+    "far_fraction_min": 0.05,
+    "band_ecology_pixels_min": 16,
+    "mean_linear_min": 0.003,
+    "clipped_fraction_max": 0.1,
+    "display_dynamic_range_min": 0.03,
+    "effect_noise_min": 5,
+    "structure_noise_min": 5,
+    "instance_pixels_min": 16
+  },
+  "calibration_gate": "reports/calibration_v3_500/gate.json",
+  "v3_asset_policy": {
+    "goal": "reuse_completed_v3_native_cycles_generator",
+    "license_scope": "CC0_or_public_domain_only",
+    "external_asset_package": "assets/source with SHA256 catalog",
+    "real_geometry_changes_require_new_gt": true,
+    "triangle_budget": 1500000,
+    "native_blend_external_path_policy": "relative_to_saved_scene_and_verified_by_no_script_reopen",
+    "version_note": "This is a batch-scale v3 experiment, not a new rendering algorithm or replacement for v3_first_round."
+  }
+}

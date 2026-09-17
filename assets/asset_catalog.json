@@ -1,0 +1,435 @@
+{
+  "schema_version": "1.0",
+  "catalog_id": "seabed-v3-external-assets-2026-09-14",
+  "project_root": "seabed_dataset_v3",
+  "generated_date": "2026-09-14",
+  "download_date": "2026-09-14",
+  "path_reference": "all files.relative_path values are relative to the repository/project root",
+  "selection_policy": {
+    "license_scope": "CC0/Public Domain candidates only",
+    "external_assets_allowed": true,
+    "preview_first": true,
+    "formal_scene_entry": "not granted by this catalog; requires preview, scale, normal, LOD, label, and budget gates",
+    "v2_isolation": "catalog and source files are v3-only; do not modify or replace seabed_dataset_v2 assets"
+  },
+  "verification": {
+    "sha256_method": "shasum -a 256",
+    "metadata_method": "file, sips, and in-memory glTF/JPEG metadata inspection",
+    "source_metadata_checked_date": "2026-09-14",
+    "notes": [
+      "Hashes below are for the files currently present under seabed_dataset_v3/assets/source/.",
+      "No processed or Blender-packed copies are present in this catalog.",
+      "Triangle counts, topology quality, scale, pivot, and normal orientation are intentionally not asserted here; they require the later asset-import gate."
+    ]
+  },
+  "assets": [
+    {
+      "asset_uid": "v3:polyhaven:rock_3:pbr-2k",
+      "display_name": "Rock 3",
+      "provider": "Poly Haven",
+      "asset_source": "cc0_imported",
+      "category": "surface_material",
+      "morphology_or_archetype": "weathered_rock",
+      "semantic_category_suggestion": {
+        "name": "rock",
+        "semantic_id": 2,
+        "scope": "material candidate only; the existing/processed rock mesh supplies labels"
+      },
+      "source_url": "https://polyhaven.com/a/rock_3",
+      "license": {
+        "spdx_id": "CC0-1.0",
+        "label": "CC0 1.0 Universal Public Domain Dedication",
+        "license_url": "https://polyhaven.com/license",
+        "author": "Rob Tuytel",
+        "status": "verified on the asset page and Poly Haven license page on 2026-09-14"
+      },
+      "download_date": "2026-09-14",
+      "source_variant": {
+        "selected_lod": "2K texture variant",
+        "resolution_px": [2048, 2048],
+        "source_release_version": null,
+        "version_note": "The local filenames identify the selected 2K variant; the exact Poly Haven release version is not encoded in the files."
+      },
+      "intended_use": [
+        "PBR surface input for v3 rock geometry or rock-cluster materials",
+        "asset-level preview before any scene integration"
+      ],
+      "preview": {
+        "eligible": true,
+        "basis": "local diffuse, GL normal, and roughness maps are present and hash-verified",
+        "formal_scene_eligible": false,
+        "blocking_checks": ["UV or world-meter mapping", "normal orientation", "material response", "texture memory budget", "rock geometry and semantic-label alignment"]
+      },
+      "processing_requirements": [
+        "Keep the diffuse/base-color map in sRGB; import normal and roughness as Non-Color data.",
+        "Use the GL normal map only after checking tangent/normal convention in the target material.",
+        "Do not use this texture set as a transparent photo plane or as a label source.",
+        "If displacement is enabled, treat the result as changed geometry and regenerate depth, semantic, and instance labels."
+      ],
+      "risks": [
+        "The material page describes a natural weathered rock surface; it does not provide a target mesh or guarantee a match to the existing rock-cluster scale.",
+        "The map set is JPEG and 2K; close-up detail and compression artifacts must be checked in preview.",
+        "Poly Haven page metadata may change; retain this URL and the local hash when redistributing."
+      ],
+      "files": [
+        {
+          "relative_path": "seabed_dataset_v3/assets/source/polyhaven/rock_3/rock_3_diff_2k.jpg",
+          "role": "base_color_diffuse",
+          "format": "JPEG",
+          "bytes": 3274198,
+          "sha256": "2e7d3905a272ac7a83b0011e8d453909a6a69bb020bfa99ea1e203c9f7d549df",
+          "resolution_px": [2048, 2048],
+          "channels": "RGB",
+          "embedded_profile": "sRGB IEC61966-2.1",
+          "blender_color_space": "sRGB"
+        },
+        {
+          "relative_path": "seabed_dataset_v3/assets/source/polyhaven/rock_3/rock_3_nor_gl_2k.jpg",
+          "role": "normal_gl",
+          "format": "JPEG",
+          "bytes": 4268677,
+          "sha256": "018b06ff3c50f5bfca8619bd6807d20a35186fea8e02b18e85d0564932beade6",
+          "resolution_px": [2048, 2048],
+          "channels": "RGB",
+          "embedded_profile": "sRGB IEC61966-2.1",
+          "blender_color_space": "Non-Color"
+        },
+        {
+          "relative_path": "seabed_dataset_v3/assets/source/polyhaven/rock_3/rock_3_rough_2k.jpg",
+          "role": "roughness",
+          "format": "JPEG",
+          "bytes": 1334746,
+          "sha256": "6e99d48bd19758e3bc7d008165fa14804da6c7a2a5f654f42a5b277198873c3a",
+          "resolution_px": [2048, 2048],
+          "channels": "Gray",
+          "embedded_profile": "Generic Gray Gamma 2.2 Profile",
+          "blender_color_space": "Non-Color"
+        },
+        {
+          "relative_path": "seabed_dataset_v3/assets/source/polyhaven/rock_3/rock_3_disp_2k.jpg",
+          "role": "displacement_height_for_bump",
+          "format": "JPEG",
+          "bytes": 640465,
+          "sha256": "446022b51bb0e887d9ad97d9b6c3d309998280a3276cb68610ebab648313cb76",
+          "resolution_px": [2048, 2048],
+          "channels": "Gray",
+          "embedded_profile": "Generic Gray Gamma 2.2 Profile",
+          "blender_color_space": "Non-Color",
+          "default_use": "bump input in preview; true displacement requires a new geometry state and GT regeneration"
+        }
+      ]
+    },
+    {
+      "asset_uid": "v3:polyhaven:coral_ground_02:pbr-2k",
+      "display_name": "Coral Ground 02",
+      "provider": "Poly Haven",
+      "asset_source": "cc0_imported",
+      "category": "surface_material",
+      "morphology_or_archetype": "exposed_coral_ground_and_gravel",
+      "semantic_category_suggestion": {
+        "name": "sand_or_rock_surface",
+        "semantic_id": null,
+        "scope": "material candidate only; choose semantic 1 sand or 2 rock from the supporting geometry, never from the texture"
+      },
+      "source_url": "https://polyhaven.com/a/coral_ground_02",
+      "license": {
+        "spdx_id": "CC0-1.0",
+        "label": "CC0 1.0 Universal Public Domain Dedication",
+        "license_url": "https://polyhaven.com/license",
+        "author": "Rob Tuytel",
+        "status": "verified on the asset page and Poly Haven license page on 2026-09-14"
+      },
+      "download_date": "2026-09-14",
+      "source_variant": {
+        "selected_lod": "2K texture variant",
+        "resolution_px": [2048, 2048],
+        "source_release_version": null,
+        "version_note": "The local filenames identify the selected 2K variant; the exact Poly Haven release version is not encoded in the files."
+      },
+      "intended_use": [
+        "PBR candidate for the v3 sand/rock boundary or coral-ground surface",
+        "asset-level preview of surface breakup and roughness"
+      ],
+      "preview": {
+        "eligible": true,
+        "basis": "local diffuse, GL normal, and roughness maps are present and hash-verified",
+        "formal_scene_eligible": false,
+        "blocking_checks": ["surface semantic assignment", "UV or world-meter mapping", "normal orientation", "material response", "texture memory budget"]
+      },
+      "processing_requirements": [
+        "Keep the diffuse/base-color map in sRGB; import normal and roughness as Non-Color data.",
+        "Use the map only on actual sand/rock geometry; it must not become a photo card, background image, or label source.",
+        "Normal and roughness changes alone do not change depth; any displacement must create a new geometry state and trigger GT regeneration.",
+        "Resolve whether the receiving geometry remains semantic 1 sand or semantic 2 rock before formal integration."
+      ],
+      "risks": [
+        "The asset is exposed coral ground with gravel and debris, not a complete seabed mesh; tiling and scale must be calibrated.",
+        "The map set is JPEG and 2K; close-up detail and compression artifacts must be checked in preview.",
+        "The source page lists multiple resolutions; this catalog covers only the local 2K files."
+      ],
+      "files": [
+        {
+          "relative_path": "seabed_dataset_v3/assets/source/polyhaven/coral_ground_02/coral_ground_02_diff_2k.jpg",
+          "role": "base_color_diffuse",
+          "format": "JPEG",
+          "bytes": 2728909,
+          "sha256": "2905e2711da7e5945bd0e92d22277102c30d58388f9dd3719611c80646e03797",
+          "resolution_px": [2048, 2048],
+          "channels": "RGB",
+          "embedded_profile": "sRGB IEC61966-2.1",
+          "blender_color_space": "sRGB"
+        },
+        {
+          "relative_path": "seabed_dataset_v3/assets/source/polyhaven/coral_ground_02/coral_ground_02_nor_gl_2k.jpg",
+          "role": "normal_gl",
+          "format": "JPEG",
+          "bytes": 4453312,
+          "sha256": "9d97d761d7bae874cbda178c8d3d8ed22c8ac88b03754c58b3519e4ec8373e34",
+          "resolution_px": [2048, 2048],
+          "channels": "RGB",
+          "embedded_profile": "sRGB IEC61966-2.1",
+          "blender_color_space": "Non-Color"
+        },
+        {
+          "relative_path": "seabed_dataset_v3/assets/source/polyhaven/coral_ground_02/coral_ground_02_rough_2k.jpg",
+          "role": "roughness",
+          "format": "JPEG",
+          "bytes": 2127529,
+          "sha256": "1d648b8051d29238c92083710d0ede686113bbe98470054c477c42cd4649dea9",
+          "resolution_px": [2048, 2048],
+          "channels": "Gray",
+          "embedded_profile": "Generic Gray Gamma 2.2 Profile",
+          "blender_color_space": "Non-Color"
+        },
+        {
+          "relative_path": "seabed_dataset_v3/assets/source/polyhaven/coral_ground_02/coral_ground_02_disp_2k.jpg",
+          "role": "displacement_height_for_bump",
+          "format": "JPEG",
+          "bytes": 646624,
+          "sha256": "4e2525d789cf88ace0279fac8dd386cc67851dcd8643ebfb32323640e0431e3a",
+          "resolution_px": [2048, 2048],
+          "channels": "Gray",
+          "embedded_profile": "Generic Gray Gamma 2.2 Profile",
+          "blender_color_space": "Non-Color",
+          "default_use": "bump input in preview; true displacement requires a new geometry state and GT regeneration"
+        }
+      ]
+    },
+    {
+      "asset_uid": "v3:smithsonian:acropora-cervicornis:usnm-1171477",
+      "display_name": "Acropora cervicornis — USNM 1171477",
+      "provider": "Smithsonian Institution, National Museum of Natural History",
+      "asset_source": "cc0_imported",
+      "category": "biota.coral",
+      "species": "Acropora cervicornis",
+      "specimen_id": "USNM 1171477",
+      "morphology_or_archetype": "branching_coral",
+      "semantic_category_suggestion": {
+        "name": "coral",
+        "semantic_id": 3,
+        "scope": "supporting mesh and all approved derived instances"
+      },
+      "source_url": "https://3d.si.edu/object/3d/acropora-cervicornis:31d1de41-2c76-46bd-8484-afb32e969431",
+      "license": {
+        "spdx_id": "CC0-1.0",
+        "label": "Smithsonian Open Access / CC0",
+        "license_url": "https://www.si.edu/openaccess/faq",
+        "author": "Smithsonian Institution",
+        "status": "source object page reports Metadata Usage: CC0; Open Access FAQ checked on 2026-09-14",
+        "boundary_note": "CC0 covers the designated digital asset copyright; retain source credit and check third-party rights or restrictions before redistribution."
+      },
+      "download_date": "2026-09-14",
+      "source_variant": {
+        "selected_lod": "100k-2048 source variant (filename token)",
+        "resolution_px": [2048, 2048],
+        "source_release_version": null,
+        "container": "glTF Binary (GLB), glTF 2.0",
+        "generator_metadata": "MeshSmith mesh conversion tool, version 2.0",
+        "version_note": "The local filename identifies the 100k-2048 variant; no separate release/version identifier is embedded."
+      },
+      "intended_use": [
+        "branching-coral candidate for isolated asset preview",
+        "optional source for static, baked v3 coral variants after import and label gates"
+      ],
+      "preview": {
+        "eligible": true,
+        "basis": "local GLB is present, hash-verified, and contains three embedded 2048×2048 JPEG maps",
+        "formal_scene_eligible": false,
+        "blocking_checks": ["unit scale", "axis and pivot", "normal orientation", "static bake/no live modifiers", "LOD selection", "semantic/instance assignment", "evaluated triangle and memory budget"]
+      },
+      "processing_requirements": [
+        "Keep the GLB as the immutable source; write any converted/baked result under assets/processed/ and add a new hash record.",
+        "The embedded base-color RGB map has no ICC profile in the local GLB and should be explicitly imported as sRGB; embedded occlusion and normal data should be Non-Color.",
+        "Verify axis, units, origin, pivot, scale, UVs, normals, and manifold/visibility behavior before using the model in a labeled scene.",
+        "Assign semantic 3 and a stable instance ID to each approved derived instance; do not let a multi-part import cross semantic classes.",
+        "Any remeshing, displacement, or geometry change requires new depth, semantic, instance, and valid-mask exports."
+      ],
+      "risks": [
+        "The Smithsonian record is a dry specimen; it is a morphology source, not a live-colony appearance or underwater ecological observation.",
+        "The source record contains collection/depth metadata that must not be interpreted as a rendering-water measurement.",
+        "The local catalog does not assert triangle count or topology quality; those require a measured import gate.",
+        "Texture maps are embedded in the GLB and do not have separate local hashes; the GLB SHA-256 covers the delivered container."
+      ],
+      "embedded_maps": [
+        {"index": 0, "role": "base_color", "format": "JPEG", "resolution_px": [2048, 2048], "channels": "RGB", "embedded_profile": null, "blender_color_space": "sRGB"},
+        {"index": 1, "role": "occlusion", "format": "JPEG", "resolution_px": [2048, 2048], "channels": "Gray", "embedded_profile": null, "blender_color_space": "Non-Color"},
+        {"index": 2, "role": "normal_gl", "format": "JPEG", "resolution_px": [2048, 2048], "channels": "RGB", "embedded_profile": null, "blender_color_space": "Non-Color"}
+      ],
+      "files": [
+        {
+          "relative_path": "seabed_dataset_v3/assets/source/smithsonian/acropora_cervicornis_usnm_1171477_100k_2048.glb",
+          "role": "source_model_with_embedded_maps",
+          "format": "GLB",
+          "bytes": 5667744,
+          "sha256": "c8e1189cbd23cfab84a8fdd6b2f410b4569df4b371fb8542c09d07cd1b5fb249",
+          "gltf_version": "2.0",
+          "embedded_map_count": 3
+        }
+      ]
+    },
+    {
+      "asset_uid": "v3:smithsonian:diploria-labyrinthiformis:usnm-74947",
+      "display_name": "Diploria labyrinthiformis — USNM 74947",
+      "provider": "Smithsonian Institution, National Museum of Natural History",
+      "asset_source": "cc0_imported",
+      "category": "biota.coral",
+      "species": "Diploria labyrinthiformis",
+      "specimen_id": "USNM 74947",
+      "morphology_or_archetype": "brain_massive_coral",
+      "semantic_category_suggestion": {
+        "name": "coral",
+        "semantic_id": 3,
+        "scope": "supporting mesh and all approved derived instances"
+      },
+      "source_url": "https://3d.si.edu/object/3d/diploria-labyrinthiformis:87738412-3acd-45d1-bff4-3ab67093470e",
+      "license": {
+        "spdx_id": "CC0-1.0",
+        "label": "Smithsonian Open Access / CC0",
+        "license_url": "https://www.si.edu/openaccess/faq",
+        "author": "Smithsonian Institution",
+        "status": "source object page reports Metadata Usage: CC0; Open Access FAQ checked on 2026-09-14",
+        "boundary_note": "CC0 covers the designated digital asset copyright; retain source credit and check third-party rights or restrictions before redistribution."
+      },
+      "download_date": "2026-09-14",
+      "source_variant": {
+        "selected_lod": "100k-2048 source variant (filename token)",
+        "resolution_px": [2048, 2048],
+        "source_release_version": null,
+        "container": "glTF Binary (GLB), glTF 2.0",
+        "generator_metadata": "MeshSmith mesh conversion tool, version 2.0",
+        "version_note": "The local filename identifies the 100k-2048 variant; no separate release/version identifier is embedded."
+      },
+      "intended_use": [
+        "brain/massive-coral candidate for isolated asset preview",
+        "optional source for static, baked v3 coral variants after import and label gates"
+      ],
+      "preview": {
+        "eligible": true,
+        "basis": "local GLB is present, hash-verified, and contains three embedded 2048×2048 JPEG maps",
+        "formal_scene_eligible": false,
+        "blocking_checks": ["unit scale", "axis and pivot", "normal orientation", "static bake/no live modifiers", "LOD selection", "semantic/instance assignment", "evaluated triangle and memory budget"]
+      },
+      "processing_requirements": [
+        "Keep the GLB as the immutable source; write any converted/baked result under assets/processed/ and add a new hash record.",
+        "The embedded base-color RGB map has no ICC profile in the local GLB and should be explicitly imported as sRGB; embedded occlusion and normal data should be Non-Color.",
+        "Verify axis, units, origin, pivot, scale, UVs, normals, and manifold/visibility behavior before using the model in a labeled scene.",
+        "Assign semantic 3 and a stable instance ID to each approved derived instance; do not let a multi-part import cross semantic classes.",
+        "Any remeshing, displacement, or geometry change requires new depth, semantic, instance, and valid-mask exports."
+      ],
+      "risks": [
+        "The Smithsonian record is a dry specimen; it is a morphology source, not a live-colony appearance or underwater ecological observation.",
+        "The source record describes a specimen collected at Carrie Bow Cay, Belize; collection metadata must not be treated as a rendering-water measurement.",
+        "The local catalog does not assert triangle count or topology quality; those require a measured import gate.",
+        "Texture maps are embedded in the GLB and do not have separate local hashes; the GLB SHA-256 covers the delivered container."
+      ],
+      "embedded_maps": [
+        {"index": 0, "role": "base_color", "format": "JPEG", "resolution_px": [2048, 2048], "channels": "RGB", "embedded_profile": null, "blender_color_space": "sRGB"},
+        {"index": 1, "role": "occlusion", "format": "JPEG", "resolution_px": [2048, 2048], "channels": "Gray", "embedded_profile": null, "blender_color_space": "Non-Color"},
+        {"index": 2, "role": "normal_gl", "format": "JPEG", "resolution_px": [2048, 2048], "channels": "RGB", "embedded_profile": null, "blender_color_space": "Non-Color"}
+      ],
+      "files": [
+        {
+          "relative_path": "seabed_dataset_v3/assets/source/smithsonian/diploria_labyrinthiformis_usnm_74947_100k_2048.glb",
+          "role": "source_model_with_embedded_maps",
+          "format": "GLB",
+          "bytes": 6086940,
+          "sha256": "c55301c7ae8d2b829f855b69f6943a4ead345e727860fa77ce1617b43496af03",
+          "gltf_version": "2.0",
+          "embedded_map_count": 3
+        }
+      ]
+    },
+    {
+      "asset_uid": "v3:smithsonian:diodon-hystrix:usnm-195928",
+      "display_name": "Diodon hystrix — USNM 195928",
+      "provider": "Smithsonian Institution, National Museum of Natural History",
+      "asset_source": "cc0_imported",
+      "category": "biota.fish",
+      "species": "Diodon hystrix",
+      "specimen_id": "USNM 195928",
+      "morphology_or_archetype": "porcupinefish",
+      "semantic_category_suggestion": {
+        "name": "fish",
+        "semantic_id": 5,
+        "scope": "supporting mesh and all approved derived instances"
+      },
+      "source_url": "https://3d.si.edu/object/3d/diodon-hystrix:e0bdb234-d604-41fd-8f47-27368159c476",
+      "license": {
+        "spdx_id": "CC0-1.0",
+        "label": "Smithsonian Open Access / CC0",
+        "license_url": "https://www.si.edu/openaccess/faq",
+        "author": "Smithsonian Institution",
+        "status": "source object page reports Metadata Usage: CC0; Open Access FAQ checked on 2026-09-14",
+        "boundary_note": "CC0 covers the designated digital asset copyright; retain source credit and check third-party rights or restrictions before redistribution."
+      },
+      "download_date": "2026-09-14",
+      "source_variant": {
+        "selected_lod": "100k-2048 source variant (filename token)",
+        "resolution_px": [2048, 2048],
+        "source_release_version": null,
+        "container": "glTF Binary (GLB), glTF 2.0",
+        "generator_metadata": "MeshSmith mesh conversion tool, version 2.0",
+        "version_note": "The local filename identifies the 100k-2048 variant; no separate release/version identifier is embedded."
+      },
+      "intended_use": [
+        "fish silhouette/material candidate for isolated asset preview",
+        "optional static fish candidate after pose, orientation, and label checks"
+      ],
+      "preview": {
+        "eligible": true,
+        "basis": "local GLB is present, hash-verified, and contains three embedded 2048×2048 JPEG maps",
+        "formal_scene_eligible": false,
+        "blocking_checks": ["unit scale", "axis and pivot", "pose/orientation", "normal orientation", "static bake/no live animation", "semantic/instance assignment", "evaluated triangle and memory budget"]
+      },
+      "processing_requirements": [
+        "Keep the GLB as the immutable source; write any converted/baked result under assets/processed/ and add a new hash record.",
+        "The embedded base-color RGB map has no ICC profile in the local GLB and should be explicitly imported as sRGB; embedded occlusion and normal data should be Non-Color.",
+        "Verify axis, units, origin, pivot, scale, UVs, normals, and pose before using the model in a paired scene.",
+        "Assign semantic 5 and a stable instance ID to each approved derived instance; preserve the same transform and pose across Clear/degraded pairs.",
+        "Any remeshing, displacement, or geometry change requires new depth, semantic, instance, and valid-mask exports."
+      ],
+      "risks": [
+        "The Smithsonian record identifies a dried specimen/osteological preparation; it is not a live-swimming fish reference and may need a clearly documented static-pose treatment.",
+        "The model must not be used to claim live coloration, behavior, or ecological distribution without separate evidence.",
+        "The local catalog does not assert triangle count or topology quality; those require a measured import gate.",
+        "Texture maps are embedded in the GLB and do not have separate local hashes; the GLB SHA-256 covers the delivered container."
+      ],
+      "embedded_maps": [
+        {"index": 0, "role": "base_color", "format": "JPEG", "resolution_px": [2048, 2048], "channels": "RGB", "embedded_profile": null, "blender_color_space": "sRGB"},
+        {"index": 1, "role": "occlusion", "format": "JPEG", "resolution_px": [2048, 2048], "channels": "Gray", "embedded_profile": null, "blender_color_space": "Non-Color"},
+        {"index": 2, "role": "normal_gl", "format": "JPEG", "resolution_px": [2048, 2048], "channels": "RGB", "embedded_profile": null, "blender_color_space": "Non-Color"}
+      ],
+      "files": [
+        {
+          "relative_path": "seabed_dataset_v3/assets/source/smithsonian/diodon_hystrix_usnm_195928_100k_2048.glb",
+          "role": "source_model_with_embedded_maps",
+          "format": "GLB",
+          "bytes": 6047524,
+          "sha256": "38ed855046ee516f56c29e1497790f2acaa4cbd159781734436b7bb62beb8b3f",
+          "gltf_version": "2.0",
+          "embedded_map_count": 3
+        }
+      ]
+    }
+  ]
+}
