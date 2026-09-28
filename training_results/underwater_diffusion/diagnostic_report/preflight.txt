@@ -1,0 +1,2 @@
+PWD=/home/lai/RDNet/DM_underwater
+CHECKPOINT=experiments_finetune/I5000_E42_gen.pth

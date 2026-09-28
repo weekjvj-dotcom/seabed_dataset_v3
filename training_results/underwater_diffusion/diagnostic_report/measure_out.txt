@@ -1,0 +1,70 @@
+out/candidate_10: images=15 c=+28.533391 a=0.903227 R2=0.955066 mean_delta=+19.208138 PSNR=20.8806 PSNR_debiased=25.4531
+out/start1999_10: images=15 c=+30.004431 a=0.909982 R2=0.948856 mean_delta=+21.330096 PSNR=20.1140 PSNR_debiased=24.9189
+out/start1898_10: images=15 c=+28.703463 a=0.901674 R2=0.953476 mean_delta=+19.228538 PSNR=20.8226 PSNR_debiased=25.2749
+out/start1500_10: images=15 c=+39.887279 a=0.794473 R2=0.956572 mean_delta=+20.082282 PSNR=20.5347 PSNR_debiased=24.4378
+out/start1000_10: images=15 c=+79.816103 a=0.472026 R2=0.933222 mean_delta=+28.939351 PSNR=16.8717 PSNR_debiased=17.8903
+out/candidate_10_clipped: images=15 c=+28.497657 a=0.889769 R2=0.957629 mean_delta=+17.875527 PSNR=21.3306 PSNR_debiased=25.5791
+{
+  "results": [
+    {
+      "directory": "out/candidate_10",
+      "images": 15,
+      "a": 0.9032270316355527,
+      "c": 28.533390753495553,
+      "r2": 0.9550664053081553,
+      "mean_enhanced_minus_clear": 19.208137681749132,
+      "psnr_raw": 20.88064316050145,
+      "psnr_debiased": 25.453111961874193
+    },
+    {
+      "directory": "out/start1999_10",
+      "images": 15,
+      "a": 0.909981941142317,
+      "c": 30.004431440955997,
+      "r2": 0.9488557941273941,
+      "mean_enhanced_minus_clear": 21.330096096462675,
+      "psnr_raw": 20.114016870100606,
+      "psnr_debiased": 24.91887392354847
+    },
+    {
+      "directory": "out/start1898_10",
+      "images": 15,
+      "a": 0.9016738092824237,
+      "c": 28.703463289304963,
+      "r2": 0.9534755025125198,
+      "mean_enhanced_minus_clear": 19.228538343641493,
+      "psnr_raw": 20.82261131907368,
+      "psnr_debiased": 25.274891799014167
+    },
+    {
+      "directory": "out/start1500_10",
+      "images": 15,
+      "a": 0.7944733156523204,
+      "c": 39.887278796025214,
+      "r2": 0.9565719740018324,
+      "mean_enhanced_minus_clear": 20.082281833224826,
+      "psnr_raw": 20.534694779371367,
+      "psnr_debiased": 24.437840778091516
+    },
+    {
+      "directory": "out/start1000_10",
+      "images": 15,
+      "a": 0.47202566185644945,
+      "c": 79.81610279178292,
+      "r2": 0.933222337510336,
+      "mean_enhanced_minus_clear": 28.93935072157118,
+      "psnr_raw": 16.871711497136673,
+      "psnr_debiased": 17.890339681293312
+    },
+    {
+      "directory": "out/candidate_10_clipped",
+      "images": 15,
+      "a": 0.8897686670336423,
+      "c": 28.49765686534137,
+      "r2": 0.9576293792071718,
+      "mean_enhanced_minus_clear": 17.875526597764757,
+      "psnr_raw": 21.33064801880712,
+      "psnr_debiased": 25.579121782707208
+    }
+  ]
+}

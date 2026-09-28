@@ -1,0 +1,138 @@
+{
+  "best_candidate": [
+    1898,
+    1640,
+    1539,
+    1491,
+    1370,
+    1136,
+    972,
+    858,
+    680,
+    340
+  ],
+  "random_candidate": [
+    1972,
+    1725,
+    1579,
+    1564,
+    1506,
+    1294,
+    1058,
+    476,
+    413,
+    196
+  ],
+  "comparisons": [
+    {
+      "file": "00000_scene_0081_mild.png",
+      "scene": "scene_0081",
+      "state": "mild",
+      "psnr_input": 14.286063763506327,
+      "ssim_input": 0.7686220969437914,
+      "psnr_best": 23.825511896367132,
+      "ssim_best": 0.9102103865881069,
+      "psnr_random": 23.259371790029114,
+      "ssim_random": 0.9049245867420156
+    },
+    {
+      "file": "00001_scene_0082_medium.png",
+      "scene": "scene_0082",
+      "state": "medium",
+      "psnr_input": 13.236721649027288,
+      "ssim_input": 0.5813448574917771,
+      "psnr_best": 19.73914988864309,
+      "ssim_best": 0.8345710835098631,
+      "psnr_random": 19.52786468226789,
+      "ssim_random": 0.8265246943944847
+    },
+    {
+      "file": "00002_scene_0083_strong.png",
+      "scene": "scene_0083",
+      "state": "strong",
+      "psnr_input": 15.363400804703677,
+      "ssim_input": 0.4357948200216542,
+      "psnr_best": 18.155637909879353,
+      "ssim_best": 0.5136466059052306,
+      "psnr_random": 17.9147461202952,
+      "ssim_random": 0.5106041398029345
+    },
+    {
+      "file": "00003_scene_0084_mild.png",
+      "scene": "scene_0084",
+      "state": "mild",
+      "psnr_input": 15.674522914833924,
+      "ssim_input": 0.8420282246532581,
+      "psnr_best": 23.370643608406763,
+      "ssim_best": 0.930392107875094,
+      "psnr_random": 22.918952998949585,
+      "ssim_random": 0.926145786792532
+    },
+    {
+      "file": "00004_scene_0085_medium.png",
+      "scene": "scene_0085",
+      "state": "medium",
+      "psnr_input": 11.69682936898949,
+      "ssim_input": 0.5873064911457383,
+      "psnr_best": 20.434750182647967,
+      "ssim_best": 0.8410944792340435,
+      "psnr_random": 19.867973647604465,
+      "ssim_random": 0.830692041279725
+    },
+    {
+      "file": "00005_scene_0086_strong.png",
+      "scene": "scene_0086",
+      "state": "strong",
+      "psnr_input": 19.200239120780147,
+      "ssim_input": 0.5554228625923253,
+      "psnr_best": 19.080435301509812,
+      "ssim_best": 0.5974916162333225,
+      "psnr_random": 19.0825334877572,
+      "ssim_random": 0.5979474255077938
+    },
+    {
+      "file": "00006_scene_0087_mild.png",
+      "scene": "scene_0087",
+      "state": "mild",
+      "psnr_input": 13.356151770291287,
+      "ssim_input": 0.7417626762450351,
+      "psnr_best": 23.584985058649835,
+      "ssim_best": 0.9021461211869718,
+      "psnr_random": 22.958390914605538,
+      "ssim_random": 0.8960794112941347
+    },
+    {
+      "file": "00007_scene_0088_medium.png",
+      "scene": "scene_0088",
+      "state": "medium",
+      "psnr_input": 11.6856259702881,
+      "ssim_input": 0.594265677888328,
+      "psnr_best": 21.29161201725967,
+      "ssim_best": 0.8600409275034412,
+      "psnr_random": 20.64046917834155,
+      "ssim_random": 0.8497821441529014
+    },
+    {
+      "file": "00008_scene_0089_strong.png",
+      "scene": "scene_0089",
+      "state": "strong",
+      "psnr_input": 20.495080411324025,
+      "ssim_input": 0.4304251645814731,
+      "psnr_best": 21.18692883710771,
+      "ssim_best": 0.42604110835092773,
+      "psnr_random": 21.16425650480769,
+      "ssim_random": 0.4283005958452037
+    },
+    {
+      "file": "00009_scene_0090_mild.png",
+      "scene": "scene_0090",
+      "state": "mild",
+      "psnr_input": 16.384214158173833,
+      "ssim_input": 0.8124527608849537,
+      "psnr_best": 23.8212391910373,
+      "ssim_best": 0.9126739242328817,
+      "psnr_random": 23.44228776790694,
+      "ssim_random": 0.908380608886457
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+epsilon_bias=-0.0017000
+key	start	1/sqrt(alpha_bar)	predicted_offset_gray
+candidate_10	1898	92.0627	+19.9534
+start1999_10	1999	150.9965	+32.7278
+start1898_10	1898	92.0627	+19.9534
+start1500_10	1500	16.8327	+3.6420
+start1000_10	1000	3.5055	+0.7283

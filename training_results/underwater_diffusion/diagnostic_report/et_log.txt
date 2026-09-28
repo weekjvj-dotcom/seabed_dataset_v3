@@ -1,0 +1,46 @@
+/home/lai/anaconda3/envs/hwang/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/lai/anaconda3/envs/hwang/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/lai/RDNet/DM_underwater/model/model.py:206: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  network.load_state_dict(torch.load(
+/home/lai/RDNet/DM_underwater/model/ddpm_trans_modules/diffusion.py:76: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  out = torch.gather(torch.tensor(a, dtype=torch.float, device=t.device), 0, t.long())
+export CUDA_VISIBLE_DEVICES=0
+auto_selected_scene_ids=0081,0082,0083,0084,0085
+checkpoint=experiments_finetune/dm_underwater_custom_260919_001816/checkpoint/I5000_E42_gen.pth
+sample_proc=ddim eta=0 noise_seed=44444
+records=scene_0081:mild,scene_0081:medium,scene_0081:strong
+schedules=candidate_10
+clip_x0=False et_log=True
+ET 1898 [-0.009269, 0.001454, 0.007632]
+ET 1640 [0.004003, 0.004168, 0.002662]
+ET 1539 [0.007018, 0.004618, 0.001247]
+ET 1491 [0.008148, 0.004689, 0.000595]
+ET 1370 [0.011238, 0.004869, -0.000903]
+ET 1136 [0.015023, 0.003966, -0.005187]
+ET 972 [0.015249, 0.003001, -0.007721]
+ET 858 [0.014415, 0.002076, -0.008893]
+ET 680 [0.012363, 0.000666, -0.010259]
+ET 340 [0.006407, -0.000579, -0.010016]
+ET 1898 [-0.009229, 0.001237, 0.007179]
+ET 1640 [0.003825, 0.004069, 0.002523]
+ET 1539 [0.006809, 0.00457, 0.001253]
+ET 1491 [0.007921, 0.004647, 0.000637]
+ET 1370 [0.010882, 0.004812, -0.00071]
+ET 1136 [0.014202, 0.003762, -0.004623]
+ET 972 [0.014065, 0.002761, -0.006872]
+ET 858 [0.013016, 0.001916, -0.007824]
+ET 680 [0.010425, 0.000692, -0.008647]
+ET 340 [0.003718, -0.00012, -0.007665]
+ET 1898 [-0.009064, 0.001037, 0.00678]
+ET 1640 [0.003962, 0.004197, 0.002484]
+ET 1539 [0.006927, 0.004796, 0.00138]
+ET 1491 [0.008022, 0.004903, 0.00082]
+ET 1370 [0.010821, 0.005099, -0.000328]
+ET 1136 [0.013589, 0.003929, -0.003862]
+ET 972 [0.013077, 0.002869, -0.005971]
+ET 858 [0.011829, 0.002074, -0.006822]
+ET 680 [0.008901, 0.001088, -0.007288]
+ET 340 [0.001976, 0.000753, -0.006001]
+wrote 1 directories × 3 PNGs under out/et_probe
